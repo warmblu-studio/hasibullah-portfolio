@@ -44,7 +44,7 @@
 <link rel="stylesheet" href="/styles.css">
 <script>
   // Blur transition only when the Gallery is one end of the navigation. Everything else is instant.
-  const isGallery = (u) => { const p = new URL(u, location.href).pathname; return p === "/" || p === "/gallery" || p.endsWith("/gallery.html") || p.endsWith("/index.html"); };
+  const isGallery = (u) => { const p = new URL(u, location.href).pathname; return p === "/gallery" || p.endsWith("/gallery.html"); };
   // Decide on the way out as well, so a non-Gallery hop never waits on a transition.
   addEventListener("pageswap", (e) => {
     if (!e.viewTransition) return;
@@ -74,7 +74,7 @@
   <ul class="linklist">
     <li><a class="btn" href="/contact">Request now</a></li>
     <li><a class="btn btn--ghost" href="https://calendly.com/hasibullah-warmblu/30min" target="_blank" rel="noopener">Book a call</a></li>
-    <li><a class="btn btn--ghost" href="/">Gallery</a></li>
+    <li><a class="btn btn--ghost" href="/gallery">Gallery</a></li>
     <li><a class="btn btn--ghost" href="/work">Work</a></li>
     <li><a class="btn btn--ghost" href="/about">About</a></li>
   </ul>

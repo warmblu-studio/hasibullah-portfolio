@@ -26,9 +26,9 @@ Profile page: https://hasibullahshanto.com/profile
 - The Second Pour: https://hasibullahshanto.com/work/second-pour
 
 ## Pages
-- Gallery: https://hasibullahshanto.com/
+- About (home page): https://hasibullahshanto.com/
 - Work: https://hasibullahshanto.com/work
-- About: https://hasibullahshanto.com/about
+- Gallery: https://hasibullahshanto.com/gallery
 - Contact: https://hasibullahshanto.com/contact
 
 ## Contact

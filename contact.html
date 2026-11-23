@@ -44,7 +44,7 @@
 <link rel="stylesheet" href="/styles.css">
 <script>
   // Blur transition only when the Gallery is one end of the navigation. Everything else is instant.
-  const isGallery = (u) => { const p = new URL(u, location.href).pathname; return p === "/" || p === "/gallery" || p.endsWith("/gallery.html") || p.endsWith("/index.html"); };
+  const isGallery = (u) => { const p = new URL(u, location.href).pathname; return p === "/gallery" || p.endsWith("/gallery.html"); };
   // Decide on the way out as well, so a non-Gallery hop never waits on a transition.
   addEventListener("pageswap", (e) => {
     if (!e.viewTransition) return;

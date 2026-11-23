@@ -1,7 +1,7 @@
 // Builds the published site in a folder (default _site) from the source files in this repo.
 //   node tools/build.mjs [outDir]
 // It copies the site, then adds what clean addresses need:
-//   /               the Gallery (a copy of gallery.html, which also stays at /gallery)
+//   /               the About page (a copy of about.html, which also stays at /about)
 //   /work/<id>      one page per client, made from client.html with its own title and description
 //   /work/<id>/<code>  one page per video (its Instagram code), with the video's cover as the share preview
 //   /work/          a copy of the Work list, so the address works with or without the slash
@@ -29,7 +29,7 @@ const esc = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g
 const read = (f) => fs.readFileSync(path.join(out, f), "utf8");
 const write = (f, s) => { fs.mkdirSync(path.dirname(path.join(out, f)), { recursive: true }); fs.writeFileSync(path.join(out, f), s); };
 
-write("index.html", read("gallery.html"));
+write("index.html", read("about.html"));
 write("work/index.html", read("work.html"));
 
 // Captions (notes.js, with any NOTES in main.js winning) and video sizes (media.js), for the per-video pages.
@@ -53,7 +53,7 @@ const DESCS = {
   "DPOIQcVkq83": "A short film for United Muslims of Australia about Hind Rajab.",
 };
 const tpl = read("client.html");
-const urls = ["/", "/about", "/work", "/contact", "/links", "/profile"];
+const urls = ["/", "/gallery", "/work", "/contact", "/links", "/profile"];
 let videoPages = 0;
 for (const g of GROUPS) {
   const desc = g.group
